@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A股大盘走势 - AI-Trader</title>
+    <link rel="icon" type="image/svg+xml" href="figs/stock.svg">
+    <link rel="stylesheet" href="assets/css/styles.css?v=4.2">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+    <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="brand-icon">📊</span>
+                <h1>AI-Trader</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">资产演变</a></li>
+                <li><a href="portfolio.html" class="nav-link">投资组合</a></li>
+                <li><a href="ai-reasoning.html" class="nav-link">AI思考全过程</a></li>
+                <li><a href="market.html" class="nav-link active">A股大盘</a></li>
+            </ul>
+            <div class="market-selector">
+                <div class="market-info">
+                    <span class="market-icon">🇨🇳</span>
+                    <span class="market-name">A股市场</span>
+                </div>
+            </div>
+            <div class="user-info-section" id="navbarUserInfo"></div>
+            <a href="https://github.com/HKUDS/AI-Trader" target="_blank" rel="noopener noreferrer" class="github-link" aria-label="View source on GitHub">
+                <svg class="github-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+                <span class="github-text">GitHub</span>
+            </a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <header class="page-header">
+            <h2>A股大盘走势</h2>
+            <p class="subtitle">追踪主要A股指数表现，支持日/周/月/年线与实时数据</p>
+        </header>
+
+        <!-- 指数选择器 -->
+        <section class="control-panel">
+            <div class="control-group">
+                <label for="indexSelect">选择指数：</label>
+                <select id="indexSelect" class="index-selector">
+                    <option value="000001.SH">上证指数</option>
+                    <option value="000016.SH">上证50</option>
+                    <option value="000300.SH">沪深300</option>
+                    <option value="399001.SZ">深证成指</option>
+                    <option value="399006.SZ">创业板指</option>
+                    <option value="000688.SH">科创50</option>
+                    <option value="899050.BJ">北证50</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label>时间周期：</label>
+                <div class="period-selector">
+                    <button class="period-btn active" data-period="daily">日线</button>
+                    <button class="period-btn" data-period="weekly">周线</button>
+                    <button class="period-btn" data-period="monthly">月线</button>
+                    <button class="period-btn" data-period="yearly">年线</button>
+                    <button class="period-btn" data-period="realtime">实时</button>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <button id="refreshBtn" class="btn-primary">刷新数据</button>
+            </div>
+        </section>
+
+        <!-- 指数概览卡片 -->
+        <section class="index-overview">
+            <div class="overview-cards" id="overviewCards">
+                <!-- 动态加载的指数卡片 -->
+            </div>
+        </section>
+
+        <!-- K线图区域 -->
+        <section class="chart-section">
+            <div class="chart-card hero">
+                <div class="chart-header">
+                    <h3 id="chartTitle">上证指数 - 日线图</h3>
+                    <div class="chart-controls">
+                        <button class="btn-secondary" id="toggleLog">线性刻度</button>
+                        <button class="btn-secondary" id="exportChart">导出数据</button>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <div id="klineChart" class="kline-container"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 成交量图 -->
+        <section class="chart-section">
+            <div class="chart-card">
+                <div class="chart-header">
+                    <h3>成交量</h3>
+                </div>
+                <div class="chart-container">
+                    <canvas id="volumeChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- 实时刷新指示器 -->
+        <div class="realtime-indicator" id="realtimeIndicator" style="display: none;">
+            <span class="pulse"></span>
+            <span class="indicator-text">实时更新中</span>
+            <span class="last-update" id="lastUpdateTime"></span>
+        </div>
+
+        <!-- 加载遮罩 -->
+        <div class="loading-overlay" id="loadingOverlay">
+            <div class="spinner"></div>
+            <p>正在加载指数数据...</p>
+        </div>
+
+        <!-- 错误提示 -->
+        <div class="error-toast" id="errorToast" style="display: none;">
+            <div class="error-content">
+                <span class="error-icon">⚠️</span>
+                <span class="error-message" id="errorMessage"></span>
+                <button class="error-close" onclick="hideError()">×</button>
+            </div>
+        </div>
+
+        <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+            ↑
+        </button>
+    </main>
+
+    <footer class="footer">
+        <p>AI-Trader &copy; 2025 | A股AI交易分析平台</p>
+    </footer>
+
+    <!-- 引入脚本 -->
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/config-loader.js?v=14.1"></script>
+    <script src="assets/js/cache-manager.js?v=3.1"></script>
+    <script src="assets/js/data-loader.js?v=14.1"></script>
+    <script src="assets/js/market-overview.js?v=1.0"></script>
+    <script src="assets/js/kline-chart.js?v=1.0"></script>
+</body>
+</html>

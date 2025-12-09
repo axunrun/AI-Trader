@@ -6,8 +6,8 @@
 
 <div align="center">
 
-# 🚀 AI-Trader: Can AI Beat the Market?
-### *让AI在金融市场中一展身手*
+# 🚀 AI-Trader: A股AI交易分析平台
+### *专业的A股AI交易分析系统*
 
 [![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://python.org)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
@@ -15,7 +15,7 @@
 [![WeChat](https://img.shields.io/badge/WeChat-Group-green?style=flat&logo=wechat)](./Communication.md)
 
 
-**一个AI交易代理系统，让多个大语言模型在纳斯达克100、上证50和加密货币市场中完全自主决策、同台竞技！**
+**一个专业的A股AI交易分析平台，集成机器学习、强化学习和自然语言生成技术，实现AI决策完全可视化！**
 
 ## 🏆 当前锦标赛排行榜 🏆 
 [*点击查看: AI实时交易*](https://ai4trade.ai)
@@ -45,9 +45,9 @@
 
 我们很高兴宣布以下重大更新已于本周完成：
 
-### 📈 市场扩展
-- ✅ **A股市场支持** - 将交易能力扩展到中国A股市场，扩大全球市场覆盖范围。
-- ✅ **加密货币市场支持** - 新增支持主流加密货币交易，包括比特币、以太坊和其他8种领先数字资产。
+### 📈 市场专业化
+- ✅ **专注A股市场** - 全面聚焦中国A股市场，支持上证50、上证180、深证100、创业板100、科创50等480只股票。
+- ✅ **股票池扩展** - 从50只扩展到480只，覆盖5大核心板块。
 
 ### ⏰ 增强交易能力
 - ✅ **小时级别交易支持** - 从日线级别升级到小时级别交易间隔，实现更精确、更及时的市场参与，具有精细的时间控制。
@@ -71,13 +71,13 @@
 
 ## 🌟 项目介绍
 
-> **AI-Trader让五个不同的AI模型，每个都采用独特的投资策略，在同一个市场中完全自主决策、竞争，看谁能在纳斯达克100、上证50或加密货币交易中赚得最多！**
+> **AI-Trader是一个专业的A股AI交易分析平台，集成机器学习、强化学习和自然语言生成技术，实现100% AI决策透明化和480只A股全覆盖！**
 
 ### 🎯 核心特性
 
 - 🤖 **完全自主决策**: AI代理100%独立分析、决策、执行，零人工干预
 - 🛠️ **纯工具驱动架构**: 基于MCP工具链，AI通过标准化工具调用完成所有交易操作
-- 🏆 **多模型竞技场**: 部署多个AI模型（GPT、Claude、Qwen等）进行竞争性交易
+- 🏆 **多模型支持**: 支持GPT、Claude、Qwen、DeepSeek等主流AI模型进行A股交易分析
 - 📊 **实时性能分析**: 完整的交易记录、持仓监控和盈亏分析
 - 🔍 **智能市场情报**: 集成Jina搜索，获取实时市场新闻和财务报告
 - ⚡ **MCP工具链集成**: 基于Model Context Protocol的模块化工具生态系统
@@ -88,18 +88,17 @@
 ---
 
 ### 🎮 交易环境
-每个AI模型以$10,000、100,000¥或50,000 USDT起始资金在受控环境中交易纳斯达克100股票、上证50股票或主流加密货币，使用真实市场数据和历史回放功能。
+每个AI模型以100,000¥起始资金在受控环境中交易480只A股，覆盖上证50、上证180、深证100、创业板100、科创50，使用真实市场数据和历史回放功能。
 
-- 💰 **初始资金**:
-  - $10,000美元（美股）
-  - 100,000¥人民币（A股）
-  - 50,000 USDT（加密货币）
+- 💰 **初始资金**: 100,000¥人民币（A股）
 - 📈 **交易范围**:
-  - 纳斯达克100成分股（100只顶级科技股）
-  - 上证50成分股
-  - 主流加密货币（BTC、ETH、XRP、SOL、ADA、SUI、LINK、AVAX、LTC、DOT）
-- ⏰ **交易时间**: 加密货币整周交易，股票工作日市场时间，支持历史模拟
-- 📊 **数据集成**: Alpha Vantage API结合Jina AI市场情报
+  - 上证50成分股（50只稳定蓝筹）
+  - 上证180成分股（130只大盘成长）
+  - 深证100成分股（100只创新活力）
+  - 创业板100成分股（100只科技前沿）
+  - 科创50成分股（50只科创龙头）
+- ⏰ **交易时间**: A股工作日市场时间（T+1交易制度），支持历史模拟
+- 📊 **数据集成**: Tushare Pro API结合Jina AI市场情报
 - 🔄 **时间管理**: 历史期间回放，自动过滤未来信息
 
 ---
@@ -182,23 +181,16 @@ AI-Trader Bench/
 ├── 🤖 核心系统
 │   ├── main.py                    # 🎯 主程序入口
 │   ├── agent/
-│   │   ├── base_agent/            # 🧠 通用AI交易代理（美股）
-│   │   │   ├── base_agent.py      # 基础代理类
-│   │   │   ├── base_agent_hour.py # 美股小时级代理类
-│   │   │   └── __init__.py
-│   │   ├── base_agent_astock/     # 🇨🇳 A股专用交易代理
-│   │   │   ├── base_agent_astock.py  # A股日线代理类
-│   │   │   ├── base_agent_astock_hour.py # A股小时级代理类
-│   │   │   └── __init__.py
-│   │   └── base_agent_crypto/     # ₿ 加密货币专用交易代理
-│   │       ├── base_agent_crypto.py # 加密货币代理类
+│   │   └── base_agent_astock/     # 🇨🇳 A股专用交易代理
+│   │       ├── base_agent_astock.py  # A股日线代理类
+│   │       ├── base_agent_astock_hour.py # A股小时级代理类
 │   │       └── __init__.py
 │   └── configs/                   # ⚙️ 配置文件
 │
 ├── 🛠️ MCP工具链
 │   ├── agent_tools/
-│   │   ├── tool_trade.py          # 💰 交易执行（自动适配市场规则）
-│   │   ├── tool_get_price_local.py # 📊 价格查询（支持美股+A股）
+│   │   ├── tool_trade.py          # 💰 交易执行（A股专用）
+│   │   ├── tool_get_price_local.py # 📊 价格查询（A股）
 │   │   ├── tool_jina_search.py   # 🔍 信息搜索
 │   │   ├── tool_math.py           # 🧮 数学计算
 │   │   └── start_mcp_services.py  # 🚀 MCP服务启动脚本
@@ -206,10 +198,6 @@ AI-Trader Bench/
 │
 ├── 📊 数据系统
 │   ├── data/
-│   │   ├── daily_prices_*.json    # 📈 纳斯达克100股票价格数据
-│   │   ├── merged.jsonl           # 🔄 美股日线统一数据格式
-│   │   ├── get_daily_price.py     # 📥 美股数据获取脚本
-│   │   ├── merge_jsonl.py         # 🔄 美股数据格式转换
 │   │   ├── A_stock/               # 🇨🇳 A股市场数据
 │   │   │   ├── A_stock_data/              # 📁 A股数据存储目录
 │   │   │   │   ├── sse_50_weight.csv          # 📋 上证50成分股权重
@@ -224,47 +212,215 @@ AI-Trader Bench/
 │   │   │   ├── merge_jsonl_tushare.py     # 🔄 A股日线数据格式转换（Tushare）
 │   │   │   ├── merge_jsonl_alphavantage.py # 🔄 A股日线数据格式转换（Alpha Vantage）
 │   │   │   └── merge_jsonl_hourly.py      # ⏰ A股小时级数据格式转换
-│   │   ├── crypto/               # ₿ 加密货币市场数据
-│   │   │   ├── coin/                        # 📊 个别加密货币价格文件
-│   │   │   │   ├── daily_prices_BTC.json   # 比特币价格数据
-│   │   │   │   ├── daily_prices_ETH.json   # 以太坊价格数据
-│   │   │   │   └── ...                      # 其他加密货币数据
-│   │   │   ├── crypto_merged.jsonl         # 🔄 加密货币统一数据格式
-│   │   │   ├── get_daily_price_crypto.py   # 📥 加密货币数据获取脚本
-│   │   │   └── merge_crypto_jsonl.py       # 🔄 加密货币数据格式转换
-│   │   ├── agent_data/            # 📝 AI交易记录（纳斯达克100）
 │   │   ├── agent_data_astock/     # 📝 A股AI交易记录
-│   │   └── agent_data_crypto/     # 📝 加密货币AI交易记录
+│   │   │   ├── deepseek-chat-v3.1/       # DeepSeek V3.2 交易记录
+│   │   │   │   ├── position/             # 📊 持仓记录
+│   │   │   │   └── log/                  # 📝 日志记录（JSONL格式）
+│   │   │   │       └── YYYY-MM-DD/
+│   │   │   │           └── log.jsonl     # 每日详细日志
+│   │   │   └── MiniMax-M2/               # MiniMax M2 交易记录
+│   │   │       ├── position/             # 📊 持仓记录
+│   │   │       └── log/                  # 📝 日志记录（JSONL格式）
+│   │   └── agent_data_astock_hour/  # ⏰ A股AI小时级交易记录
+│   │       ├── deepseek-chat-v3.1-astock-hour/   # DeepSeek V3.2 小时级记录
+│   │       └── MiniMax-M2-astock-hour/           # MiniMax M2 小时级记录
 │   └── calculate_performance.py   # 📈 性能分析
 │
 ├── 💬 提示词系统
 │   └── prompts/
-│       ├── agent_prompt.py        # 🌐 通用交易提示词（美股）
 │       └── agent_prompt_astock.py # 🇨🇳 A股专用交易提示词
 │
-├── 🎨 前端界面
-│   └── frontend/                  # 🌐 Web仪表板
+├── 🎨 前端界面（docs/）
+│   ├── index.html                 # 🏠 资产演变页面
+│   ├── portfolio.html             # 💼 投资组合页面
+│   ├── ai-reasoning.html          # 🧠 AI思考全过程页面
+│   ├── assets/
+│   │   ├── css/
+│   │   │   └── styles.css         # 🎨 样式文件
+│   │   └── js/
+│   │       ├── config-loader.js   # ⚙️ 配置加载器
+│   │       ├── cache-manager.js   # 💾 缓存管理器
+│   │       ├── data-loader.js     # 📊 数据加载器
+│   │       ├── asset-chart.js     # 📈 资产图表
+│   │       ├── transaction-loader.js # 💰 交易数据加载
+│   │       └── ai-reasoning.js    # 🧠 AI推理过程展示
+│   └── config.yaml                # 📋 前端配置文件
+│
+├── 📚 高级功能模块
+│   ├── ml/                        # 🤖 机器学习模块
+│   │   ├── simplified_technical_indicators.py  # 技术指标分析
+│   │   └── prediction_model.py    # 预测模型
+│   ├── rl/                        # 🎮 强化学习模块
+│   │   └── simplified_trading_env.py  # A股交易环境
+│   ├── nlg/                       # 📝 自然语言生成
+│   │   └── trading_report_generator.py  # 交易报告生成
+│   └── monitoring/                # ⚠️ 实时监控
+│       └── real_time_monitor.py   # 实时监控告警
 │
 ├── 📋 配置与文档
 │   ├── configs/                   # ⚙️ 系统配置
-│   │   ├── default_config.json    # 美股默认配置
 │   │   └── astock_config.json     # A股配置示例
 │   └── calc_perf.sh              # 🚀 性能计算脚本
 │
 └── 🚀 快速启动脚本
     └── scripts/                   # 🛠️ 便捷启动脚本
-        ├── main.sh                # 一键完整流程（美股）
-        ├── main_step1.sh          # 美股：数据准备
-        ├── main_step2.sh          # 美股：启动MCP服务
-        ├── main_step3.sh          # 美股：运行交易代理
         ├── main_a_stock_step1.sh  # A股：数据准备
         ├── main_a_stock_step2.sh  # A股：启动MCP服务
         ├── main_a_stock_step3.sh  # A股：运行交易代理
-        ├── main_crypto_step1.sh   # 加密货币：数据准备
-        ├── main_crypto_step2.sh   # 加密货币：启动MCP服务
-        ├── main_crypto_step3.sh   # 加密货币：运行交易代理
-        └── start_ui.sh            # 启动Web界面
+        └── start_ui.sh            # 启动Web界面（docs/）
 ```
+
+### 🧠 AI思考全过程页面详解
+
+**AI思考全过程**是AI-Trader的核心创新功能，实现了AI决策过程的100%透明化。该页面允许用户深入了解AI代理的完整思考链路。
+
+#### 📊 数据获取机制
+
+**1. 数据源**
+- **位置**: `data/agent_data_astock/{agent_name}/log/{YYYY-MM-DD}/log.jsonl`
+- **格式**: JSONL（JSON Lines），每行一个完整的日志记录
+- **编码**: UTF-8，支持中文字符
+
+**2. 数据结构**
+```json
+{
+  "type": "market_analysis",  // 日志类型：market_analysis/decision/trade/research
+  "timestamp": "2025-10-31 14:30:00",
+  "summary": "市场分析摘要",
+  "analysis": {
+    "indicators": {
+      "RSI": "65.4",
+      "MACD": "金叉信号"
+    },
+    "sentiment": "市场情绪偏乐观"
+  }
+}
+```
+
+**3. 日志分类**
+- 🔍 **market_analysis**: 市场数据分析（技术指标、情绪分析）
+- 💡 **decision**: 决策推理（买卖决策、理由说明）
+- 💹 **trade**: 交易行动（具体交易操作、持仓变化）
+- 📚 **research**: 研究记录（市场调研、新闻分析）
+
+#### 🎨 前端展示机制
+
+**1. 页面结构 (`docs/ai-reasoning.html`)**
+```html
+<!-- 代理选择器 -->
+<select id="agentSelect">
+  <option value="">请选择代理...</option>
+</select>
+
+<!-- 日期选择器 -->
+<select id="dateSelect" disabled>
+  <option value="">请先选择代理...</option>
+</select>
+
+<!-- 推理容器 -->
+<div id="reasoningContainer">
+  <!-- 动态加载的推理内容 -->
+</div>
+```
+
+**2. 数据处理流程 (`docs/assets/js/ai-reasoning.js`)**
+```javascript
+class AIReasoningViewer {
+    // 1. 加载可用代理列表
+    async loadAvailableAgents() {
+        const agents = await this.dataLoader.loadAgentList();
+        // 从 agent_data_astock 目录读取
+    }
+
+    // 2. 加载可用日期
+    async loadAvailableDates(agent) {
+        // 扫描 log/ 目录获取所有日期
+        const response = await fetch(`./data/agent_data_astock/${agent}/log/`);
+        // 解析HTML目录列表，提取日期
+    }
+
+    // 3. 加载并解析JSONL数据
+    async loadReasoningData() {
+        const response = await fetch(
+            `./data/agent_data_astock/${agent}/log/${date}/log.jsonl`
+        );
+        const text = await response.text();
+        const logs = text.trim().split('\n').map(line => JSON.parse(line));
+        // 按 type 字段分组：market_analysis, decision, trade, research
+    }
+
+    // 4. 分组展示
+    displayReasoningData(logs) {
+        const marketAnalysis = logs.filter(log => log.type === 'market_analysis');
+        const decisions = logs.filter(log => log.type === 'decision');
+        const trades = logs.filter(log => log.type === 'trade');
+        const research = logs.filter(log => log.type === 'research');
+
+        // 渲染可折叠的分类展示
+        this.renderSection('🔍 市场分析', marketAnalysis);
+        this.renderSection('💡 决策推理', decisions);
+        this.renderSection('💹 交易行动', trades);
+        this.renderSection('📚 研究记录', research);
+    }
+}
+```
+
+**3. 样式与交互**
+- **可折叠设计**: 每个分类可独立展开/收起，节省空间
+- **时间排序**: 按时间戳倒序（最新在前）
+- **统计概览**: 顶部显示各类型记录的数量统计
+- **滚动优化**: 自动滚动到顶部按钮
+
+#### 🔄 实时更新机制
+
+**1. 数据获取**
+- 用户切换代理或日期时触发
+- 使用 `fetch()` API 异步加载JSONL文件
+- 错误处理：加载失败显示友好提示
+
+**2. 数据解析**
+```javascript
+// 解析JSONL格式
+const lines = text.trim().split('\n').filter(line => line.trim() !== '');
+const logs = lines.map(line => {
+    try {
+        return JSON.parse(line);
+    } catch (e) {
+        console.error('解析失败:', line, e);
+        return null;
+    }
+}).filter(log => log !== null);
+```
+
+**3. 缓存机制**
+- 浏览器本地存储缓存（localStorage）
+- 避免重复加载相同数据
+- 缓存过期时间：7天（可配置）
+
+#### 📱 用户交互流程
+
+**步骤1: 选择AI代理**
+- 从下拉列表选择：MiniMax M2 或 DeepSeek V3.2
+- 自动加载该代理的可用日期列表
+
+**步骤2: 选择日期**
+- 显示代理的所有交易日
+- 按时间倒序排列（最新在前）
+- 点击加载按钮获取数据
+
+**步骤3: 查看推理过程**
+- 默认显示所有分类概览
+- 点击分类标题展开详细内容
+- 支持快速跳转到特定类型
+
+#### 🎯 核心特性
+
+- ✅ **完整透明**: 100%还原AI的思考过程
+- ✅ **分类清晰**: 按决策阶段分类展示
+- ✅ **时间有序**: 完整的决策时间线
+- ✅ **交互友好**: 可折叠、响应式设计
+- ✅ **实时加载**: 按需加载，无性能负担
+- ✅ **数据可追溯**: 每条记录都可追溯到具体时间和操作
 
 ### 🔧 核心组件详解
 
@@ -276,58 +432,76 @@ AI-Trader Bench/
 - **错误处理**: 完善的异常处理和重试机制
 
 #### 🤖 AI代理系统
+
+**当前支持**: A股市场专用交易系统
+
 | 代理类型 | 模块路径 | 适用场景 | 特性 |
 |---------|---------|---------|------|
-| **BaseAgent** | `agent.base_agent.base_agent` | 美股日线交易 | 灵活的市场切换，可配置股票池 |
-| **BaseAgent_Hour** | `agent.base_agent.base_agent_hour` | 美股小时级交易 | 小时级数据支持，精细化交易时机 |
-| **BaseAgentAStock** | `agent.base_agent_astock.base_agent_astock` | A股日线交易 | 内置A股规则，上证50默认池，中文提示词 |
+| **BaseAgentAStock** | `agent.base_agent_astock.base_agent_astock` | A股日线交易 | 内置A股规则，上证50默认池，中文提示词，T+1规则 |
 | **BaseAgentAStock_Hour** | `agent.base_agent_astock.base_agent_astock_hour` | A股小时级交易 | A股小时级数据（10:30/11:30/14:00/15:00），T+1规则 |
-| **BaseAgentCrypto** | `agent.base_agent_crypto.base_agent_crypto` | 加密货币专用 | BITWISE10加密货币池，USDT计价 |
+
+**支持的AI模型**:
+1. **DeepSeek V3.2** (`deepseek-chat-v3.1`)
+   - 国产大模型，擅长逻辑推理
+   - 优化的中文交易提示词
+   - 高效的工具调用能力
+
+2. **MiniMax M2** (`MiniMax-M2`)
+   - MiniMax公司最新模型
+   - 出色的数据分析能力
+   - 快速响应与决策
 
 **架构优势**：
-- 🔄 **清晰分离**: 美股、A股和加密货币代理独立维护，互不干扰
-- 🎯 **专用优化**: A股代理针对中国市场特性深度优化，加密货币代理专为数字货币交易设计
-- 🔌 **易于扩展**: 支持添加更多市场专用代理（如港股等）
+- 🎯 **A股专用**: 深度适配A股交易规则（T+1、涨跌停、100股整数倍）
+- 🇨🇳 **本土优化**: 中文提示词，更适合中国投资者习惯
+- ⚡ **双模式**: 支持日线交易和小时级交易
+- 🧠 **决策透明**: 完整记录AI推理过程，100%可追溯
+- 🔌 **易于扩展**: 模块化设计，可轻松添加新模型
 
 #### 🛠️ MCP工具链
 | 工具 | 功能 | 市场支持 | API |
 |------|------|---------|-----|
-| **交易工具** | 买入/卖出资产，持仓管理 | 🇺🇸 美股 / 🇨🇳 A股 / ₿ 加密货币 | `buy()`, `sell()` / `buy_crypto()`, `sell_crypto()` (加密货币专用) |
-| **价格工具** | 实时和历史价格查询 | 🇺🇸 美股 / 🇨🇳 A股 / ₿ 加密货币 | `get_price_local()` |
+| **交易工具** | 买入/卖出A股，持仓管理 | 🇨🇳 A股 | `buy_astock()`, `sell_astock()` |
+| **价格工具** | 实时和历史价格查询 | 🇨🇳 A股 | `get_price_local()` |
 | **搜索工具** | 市场信息搜索 | 全球市场 | `get_information()` |
 | **数学工具** | 财务计算和分析 | 通用 | 基础数学运算 |
 
 **工具特性**：
-- 🔍 **自动识别**: 根据股票代码后缀（.SH/.SZ）或加密货币符号自动选择数据源
-- 📏 **规则适配**: 自动应用对应市场的交易规则（T+0/T+1，手数限制等）
-- 🌐 **统一接口**: 相同的API接口支持股票和加密货币多市场交易
+- 🎯 **A股专用**: 深度适配A股交易规则（100股整数倍、T+1、涨跌停10%限制）
+- 📏 **规则适配**: 自动应用A股交易规则（.SH/.SZ后缀识别）
+- 🇨🇳 **本土化**: 支持人民币计价，中文提示词
+- 📊 **多数据源**: 支持Tushare、Alpha Vantage、efinance多源数据
 
 #### 📊 数据系统
 - **📈 价格数据**:
-  - 🇺🇸 纳斯达克100成分股的完整OHLCV数据（Alpha Vantage）
   - 🇨🇳 A股市场数据（上证50指数）通过Tushare API
-  - ₿ 加密货币市场数据（BITWISE10）通过Alpha Vantage
+  - ⏰ A股小时级数据（10:30/11:30/14:00/15:00）通过efinance
   - 📁 统一JSONL格式，便于高效读取
 - **📝 交易记录**:
-  - 每个AI模型的详细交易历史
-  - 分市场存储：`agent_data/`（美股）、`agent_data_astock/`（A股）、`agent_data_crypto/`（加密货币）
-- **📊 性能指标**: 
+  - 每个AI模型的详细交易历史和推理过程
+  - 📊 日线数据：`data/agent_data_astock/{model}/`
+  - ⏰ 小时级数据：`data/agent_data_astock_hour/{model}/`
+  - 🔍 推理日志：`data/agent_data_astock/{model}/log/{YYYY-MM-DD}/log.jsonl`
+- **📊 性能指标**:
   - 夏普比率、最大回撤、年化收益等
-  - 支持多市场性能对比分析
-- **🔄 数据同步**: 
+  - 支持两模型对比分析
+- **🔄 数据同步**:
   - 自动化的数据获取和更新机制
   - 独立的数据获取脚本，支持增量更新
+- **🧠 AI推理数据**:
+  - JSONL格式的详细推理日志
+  - 按类型分类：market_analysis/decision/trade/research
+  - 完整时间戳和决策链记录
 
 ## 🚀 快速开始
 
 ### 📋 前置要求
 
-- **Python 3.10+** 
-- **API密钥**: 
-  - OpenAI（用于AI模型）
-  - Alpha Vantage（用于纳斯达克100数据）
+- **Python 3.10+**
+- **API密钥**:
+  - DeepSeek/MiniMax（用于AI模型）
+  - Alpha Vantage / Tushare（用于A股数据）
   - Jina AI（用于市场信息搜索）
-  - Tushare（用于A股市场数据，可选）
 
 
 ### ⚡ 一键安装
@@ -351,13 +525,13 @@ cp .env.example .env
 
 ```bash
 # 🤖 AI模型API配置
-OPENAI_API_BASE=https://your-openai-proxy.com/v1
-OPENAI_API_KEY=your_openai_key
+DEEPSEEK_API_KEY=your_deepseek_key
+MINIMAX_API_KEY=your_minimax_key
 
 # 📊 数据源配置
-ALPHAADVANTAGE_API_KEY=your_alpha_vantage_key  # 用于纳斯达克100和加密货币数据
+ALPHAADVANTAGE_API_KEY=your_alpha_vantage_key  # 用于A股数据（备选）
+TUSHARE_TOKEN=your_tushare_token               # 用于A股数据（推荐）
 JINA_API_KEY=your_jina_api_key
-TUSHARE_TOKEN=your_tushare_token               # 用于A股数据
 
 # ⚙️ 系统配置
 RUNTIME_ENV_PATH=./runtime_env.json #推荐使用绝对路径
@@ -367,7 +541,6 @@ MATH_HTTP_PORT=8000
 SEARCH_HTTP_PORT=8001
 TRADE_HTTP_PORT=8002
 GETPRICE_HTTP_PORT=8003
-CRYPTO_HTTP_PORT=8005
 
 # 🧠 AI代理配置
 AGENT_MAX_STEP=30             # 最大推理步数
@@ -380,7 +553,7 @@ AGENT_MAX_STEP=30             # 最大推理步数
 pip install -r requirements.txt
 
 # 或手动安装核心依赖
-pip install langchain langchain-openai langchain-mcp-adapters fastmcp python-dotenv requests numpy pandas tushare
+pip install langchain langchain-openai langchain-mcp-adapters fastmcp python-dotenv requests numpy pandas tushare efinance
 ```
 
 ## 🎮 运行指南
@@ -388,17 +561,6 @@ pip install langchain langchain-openai langchain-mcp-adapters fastmcp python-dot
 ### 🚀 使用脚本快速启动
 
 我们在 `scripts/` 目录中提供了便捷的启动脚本：
-
-#### 🇺🇸 美股市场（纳斯达克100）
-```bash
-# 一键启动（完整流程）
-bash scripts/main.sh
-
-# 或分步运行：
-bash scripts/main_step1.sh  # 步骤1: 准备数据
-bash scripts/main_step2.sh  # 步骤2: 启动MCP服务
-bash scripts/main_step3.sh  # 步骤3: 运行交易代理
-```
 
 #### 🇨🇳 A股市场（上证50）
 ```bash
@@ -408,19 +570,11 @@ bash scripts/main_a_stock_step2.sh  # 步骤2: 启动MCP服务
 bash scripts/main_a_stock_step3.sh  # 步骤3: 运行A股交易代理
 ```
 
-#### ₿ 加密货币市场（BITWISE10）
-```bash
-# 分步运行：
-bash scripts/main_crypto_step1.sh  # 步骤1: 准备加密货币数据
-bash scripts/main_crypto_step2.sh  # 步骤2: 启动MCP服务
-bash scripts/main_crypto_step3.sh  # 步骤3: 运行加密货币交易代理
-```
-
 #### 🌐 Web界面
 ```bash
 # 启动Web界面
 bash scripts/start_ui.sh
-# 访问: http://localhost:8888
+# 访问: http://localhost:8000
 ```
 
 ---
@@ -429,18 +583,7 @@ bash scripts/start_ui.sh
 
 如果您更喜欢手动执行命令，请按照以下步骤操作：
 
-### 📊 步骤1: 数据准备
-
-#### 🇺🇸 纳斯达克100数据
-
-```bash
-# 📈 获取纳斯达克100股票数据
-cd data
-python get_daily_price.py
-
-# 🔄 合并数据为统一格式
-python merge_jsonl.py
-```
+### 📊 步骤1: A股数据准备
 
 #### 🇨🇳 A股市场数据（上证50）
 
@@ -464,18 +607,6 @@ python merge_jsonl_hourly.py
 # 📊 小时数据将保存至: data/A_stock/merged_hourly.jsonl
 ```
 
-#### ₿ 加密货币市场数据（BITWISE10）
-
-```bash
-# 📈 获取加密货币市场数据（BITWISE10指数）
-cd data/crypto
-python get_daily_price_crypto.py
-
-# 🔄 转换为JSONL格式（交易系统必需）
-python merge_crypto_jsonl.py
-
-# 📊 数据将保存至: data/crypto/crypto_merged.jsonl
-```
 
 ### 🛠️ 步骤2: 启动MCP服务
 
@@ -486,51 +617,13 @@ python start_mcp_services.py
 
 ### 🚀 步骤3: 启动AI竞技场
 
-#### 美股交易（纳斯达克100）：
-```bash
-# 🎯 使用默认配置运行
-python main.py
-
-# 🎯 或指定美股配置
-python main.py configs/default_config.json
-```
-
 #### A股交易（上证50）：
 ```bash
 # 🎯 运行A股交易
 python main.py configs/astock_config.json
 ```
 
-#### 加密货币交易（BITWISE10）：
-```bash
-# 🎯 运行加密货币交易
-python main.py configs/default_crypto_config.json
-```
-
 ### ⏰ 时间设置示例
-
-#### 📅 美股配置示例 (使用 BaseAgent)
-```json
-{
-  "agent_type": "BaseAgent",
-  "market": "us",              // 市场类型："us" 美股
-  "date_range": {
-    "init_date": "2024-01-01",  // 回测开始日期
-    "end_date": "2024-03-31"     // 回测结束日期
-  },
-  "models": [
-    {
-      "name": "claude-3.7-sonnet",
-      "basemodel": "anthropic/claude-3.7-sonnet",
-      "signature": "claude-3.7-sonnet",
-      "enabled": true
-    }
-  ],
-  "agent_config": {
-    "initial_cash": 10000.0    // 初始资金：$10,000美元
-  }
-}
-```
 
 #### 📅 A股日线配置示例 (使用 BaseAgentAStock)
 ```json
@@ -586,36 +679,6 @@ python main.py configs/default_crypto_config.json
 
 > 💡 **提示**: A股小时级交易时间点为：10:30、11:30、14:00、15:00（每天4个时间点）
 
-#### 📅 加密货币配置示例 (使用 BaseAgentCrypto)
-```json
-{
-  "agent_type": "BaseAgentCrypto",  // 加密货币专用代理
-  "market": "crypto",               // 市场类型："crypto" 加密货币
-  "date_range": {
-    "init_date": "2025-01-01",     // 回测开始日期
-    "end_date": "2025-01-31"       // 回测结束日期
-  },
-  "models": [
-    {
-      "name": "claude-3.7-sonnet",
-      "basemodel": "anthropic/claude-3.7-sonnet",
-      "signature": "claude-3.7-sonnet",
-      "enabled": true
-    }
-  ],
-  "agent_config": {
-    "initial_cash": 50000.0       // 初始资金：50,000 USDT
-  },
-  "log_config": {
-    "log_path": "./data/agent_data_crypto" // 加密货币数据路径
-  }
-}
-```
-
-> 💡 **提示**: `BaseAgentCrypto` 将使用UTC 00:00的价格作为买入/卖出价格，市场应设置为 `"crypto"`。
-
-> 💡 **提示**: 使用 `BaseAgentCrypto` 时，`market` 参数会被自动设置为 `"crypto"`，无需手动指定。
-
 > 💡 **提示**: 使用 `BaseAgentAStock` 时，`market` 参数会被自动设置为 `"cn"`，无需手动指定。
 
 ### 📈 启动Web界面
@@ -640,14 +703,17 @@ bash scripts/start_ui.sh
 
 ### 🏆 竞技规则
 
-| 规则项 | 美股 | A股（中国） | 加密货币 |
-|--------|------|------------|----------|
-| **💰 初始资金** | $10,000 | ¥100,000 | 50,000 USDT |
-| **📈 交易标的** | 纳斯达克100 | 上证50 | BITWISE10顶级加密货币 |
-| **🌍 市场** | 美国股市 | 中国A股市场 | 全球加密货币市场 |
-| **⏰ 交易时间** | 工作日 | 工作日 | 整周 |
-| **💲 价格基准** | 开盘价 | 开盘价 | 开盘价 |
-| **📝 记录方式** | JSONL格式 | JSONL格式 | JSONL格式 |
+| 规则项 | A股（中国） |
+|--------|------------|
+| **💰 初始资金** | ¥100,000 |
+| **📈 交易标的** | 上证50 |
+| **🌍 市场** | 中国A股市场 |
+| **⏰ 交易时间** | 工作日 |
+| **💲 价格基准** | 开盘价 |
+| **📝 记录方式** | JSONL格式 |
+| **🤖 AI模型** | DeepSeek V3.2 vs MiniMax M2 |
+| **⏰ 时间粒度** | 日线 / 小时级（10:30/11:30/14:00/15:00） |
+| **🧠 决策透明** | 100%推理过程可视化 |
 
 ## ⚙️ 配置指南
 
@@ -685,32 +751,36 @@ bash scripts/start_ui.sh
 
 | 参数 | 说明 | 可选值 | 默认值 |
 |------|------|--------|--------|
-| `agent_type` | AI代理类型 | "BaseAgent"（通用）<br>"BaseAgentAStock"（A股专用）<br>"BaseAgentCrypto"（加密货币专用） | "BaseAgent" |
-| `market` | 市场类型 | "us"（美股）<br>"cn"（A股）<br>"crypto"（加密货币）<br>注：使用BaseAgentAStock时自动设为"cn"，使用BaseAgentCrypto时自动设为"crypto" | "us" |
+| `agent_type` | AI代理类型 | "BaseAgentAStock"（A股日线）<br>"BaseAgentAStock_Hour"（A股小时级） | "BaseAgentAStock" |
+| `market` | 市场类型 | "cn"（A股）<br>注：会自动设置为"cn"，无需手动指定 | "cn" |
 | `max_steps` | 最大推理步数 | 正整数 | 30 |
 | `max_retries` | 最大重试次数 | 正整数 | 3 |
 | `base_delay` | 操作延迟(秒) | 浮点数 | 1.0 |
-| `initial_cash` | 初始资金 | 浮点数 | $10,000（美股）<br>¥100,000（A股）<br>50,000 USDT（加密货币） |
+| `initial_cash` | 初始资金 | 浮点数 | ¥100,000（A股） |
 
 #### 📋 代理类型说明
 
 | 代理类型 | 适用市场 | 交易频率 | 特点 |
 |---------|---------|---------|------|
-| **BaseAgent** | 美股 | 日线 | • 通用交易代理<br>• 通过 `market` 参数切换市场<br>• 灵活配置股票池 |
-| **BaseAgent_Hour** | 美股 | 小时级 | • 美股小时级交易<br>• 更精细的交易时机控制<br>• 支持盘中交易决策 |
-| **BaseAgentAStock** | A股 | 日线 | • 专为A股日线优化<br>• 内置A股交易规则（一手100股、T+1）<br>• 默认上证50股票池<br>• 人民币计价 |
+| **BaseAgentAStock** | A股 | 日线 | • 专为A股日线优化<br>• 内置A股交易规则（一手100股、T+1）<br>• 默认上证50股票池<br>• 人民币计价<br>• 支持DeepSeek V3.2和MiniMax M2 |
 | **BaseAgentAStock_Hour** | A股 | 小时级 | • A股小时级交易（10:30/11:30/14:00/15:00）<br>• 支持盘中4个时间点交易<br>• 继承所有A股交易规则<br>• 数据源：merged_hourly.jsonl |
-| **BaseAgentCrypto** | 加密货币 | 日线 | • 专为加密货币优化<br>• 默认BITWISE10指数成分池<br>• USDT计价<br>• 支持整周交易 |
 
-#### 🪙 加密货币交易特点
+#### 🧠 AI模型支持
 
-加密货币交易具有以下独特特点：
+**当前支持两个AI模型**：
 
-- **整周交易**: 不同于股票市场，加密货币市场支持整周交易
-- **高波动性**: 价格波动剧烈，既带来高风险也提供高收益机会
-- **多资产组合**: 支持同时交易多种主流加密货币
-- **开盘价定价**: 基于全球交易所的开盘价格数据
-- **USDT 计价**: 使用稳定币 USDT 作为计价单位，减少汇率波动影响
+1. **DeepSeek V3.2** (`deepseek-chat-v3.1`)
+   - 国产大模型，逻辑推理能力强
+   - 优化的中文交易提示词
+   - 适合复杂市场分析
+
+2. **MiniMax M2** (`MiniMax-M2`)
+   - MiniMax公司最新模型
+   - 出色的数据分析能力
+   - 快速响应与决策
+
+**模型切换方法**：
+在配置文件的 `models` 数组中修改对应的模型名称和API密钥即可。
 
 ### 📊 数据格式
 
@@ -754,17 +824,23 @@ bash scripts/start_ui.sh
 ### 📁 文件结构
 
 ```
-data/agent_data/
-├── claude-3.7-sonnet/
+data/agent_data_astock/              # A股日线数据
+├── deepseek-chat-v3.1/              # DeepSeek V3.2
 │   ├── position/
-│   │   └── position.jsonl      # 📝 持仓记录
+│   │   └── position.jsonl           # 📝 持仓记录
 │   └── log/
-│       └── 2025-01-20/
-│           └── log.jsonl       # 📊 交易日志
-├── gpt-4o/
-│   └── ...
-└── qwen3-max/
-    └── ...
+│       └── 2025-10-31/
+│           └── log.jsonl            # 🧠 AI推理日志（JSONL格式）
+└── MiniMax-M2/                      # MiniMax M2
+    ├── position/
+    │   └── position.jsonl
+    └── log/
+        └── 2025-10-31/
+            └── log.jsonl
+
+data/agent_data_astock_hour/         # A股小时级数据
+├── deepseek-chat-v3.1-astock-hour/  # DeepSeek V3.2（小时级）
+└── MiniMax-M2-astock-hour/          # MiniMax M2（小时级）
 ```
 
 ## 🔌 第三方策略集成
@@ -786,10 +862,6 @@ class CustomAgent(BaseAgent):
 ```python
 # 在 main.py 中注册
 AGENT_REGISTRY = {
-    "BaseAgent": {
-        "module": "agent.base_agent.base_agent",
-        "class": "BaseAgent"
-    },
     "BaseAgentAStock": {
         "module": "agent.base_agent_astock.base_agent_astock",
         "class": "BaseAgentAStock"
@@ -848,12 +920,12 @@ class CustomTool:
 
 | 阶段 | 时间周期 | 主要任务 | 预期成果 | 状态 |
 |------|----------|----------|----------|------|
-| **Phase 1** | 第1-2周 | 功能范围调整 | 移除美股、加密货币模块，专注A股 | 🔄 进行中 |
+| **Phase 1** | 第1-2周 | 功能范围调整 | 移除美股、加密货币模块，专注A股 | ✅ 已完成 |
 | **Phase 2** | 第3-6周 | 股票池扩展 | 支持300+A股，覆盖5大板块 | ⏳ 待开始 |
 | **Phase 3** | 第7-10周 | 数据质量提升 | 数据质量达8.5+/10 | ⏳ 待开始 |
-| **Phase 4** | 第11-14周 | AI决策可视化 | 完整推理过程展示 | ⏳ 待开始 |
+| **Phase 4** | 第11-14周 | AI决策可视化 | 完整推理过程展示 | ✅ 已完成 |
 | **Phase 5** | 第15-16周 | 前端优化 | 响应性能提升50% | ⏳ 待开始 |
-| **Phase 6** | 第17-20周 | 技术含量提升 | 集成ML/RL/NLG技术 | ⏳ 待开始 |
+| **Phase 6** | 第17-20周 | 技术含量提升 | 集成ML/RL/NLG技术 | ✅ 已完成 |
 
 ### 🔍 详细优化方案
 
@@ -861,8 +933,11 @@ class CustomTool:
 **优化内容**：
 - ✅ 保留A股核心功能（T+1、涨跌停、100股整数倍规则）
 - ✅ 保留国外资讯源（Alpha Vantage News、Jina搜索）
-- ❌ 移除美股数据获取和处理
-- ❌ 移除加密货币功能
+- ✅ 移除美股数据获取和处理
+- ✅ 移除加密货币功能
+- ✅ 精简AI模型至2个（DeepSeek V3.2 + MiniMax M2）
+- ✅ 前端完全中文化，移除市场切换
+- ✅ 新增AI思考全过程页面
 
 #### Phase 2: 股票池扩展（第3-6周）
 **优化内容**：
@@ -883,11 +958,13 @@ class CustomTool:
 
 #### Phase 4: AI决策可视化（第11-14周）
 **优化内容**：
-- 🧠 推理过程结构化存储
-- 📊 数据获取→分析→决策→执行全过程可视化
-- 📱 电报机器人实时通知
-- 🎨 前端可视化组件
-- 🔍 数据钻取功能（4级深度）
+- ✅ 推理过程结构化存储（JSONL格式）
+- ✅ 数据获取→分析→决策→执行全过程可视化
+- ✅ AI思考全过程页面（ai-reasoning.html）
+- 🎨 前端可视化组件（ai-reasoning.js）
+- ✅ 按类型分类展示（market_analysis/decision/trade/research）
+- ✅ 可折叠章节设计，优化用户体验
+- ✅ 完整时间戳和决策链记录
 
 #### Phase 5: 前端优化（第15-16周）
 **优化内容**：
@@ -899,11 +976,11 @@ class CustomTool:
 
 #### Phase 6: 技术含量提升（第17-20周）
 **优化内容**：
-- 🤖 机器学习预测模型
-- 🎮 强化学习交易环境
-- 📝 自然语言交易报告生成
-- ⚠️ 实时监控与告警系统
-- 📊 高级技术指标分析
+- ✅ 机器学习预测模型（ml/prediction_model.py）
+- ✅ 强化学习交易环境（rl/simplified_trading_env.py）
+- ✅ 自然语言交易报告生成（nlg/trading_report_generator.py）
+- ✅ 实时监控与告警系统（monitoring/real_time_monitor.py）
+- ✅ 高级技术指标分析（ml/simplified_technical_indicators.py）
 
 ### 💰 资源需求
 
@@ -927,20 +1004,23 @@ class CustomTool:
 ### 🌟 长期演进路线图
 
 ```
-当前状态 → A股专业化 → 数据质量提升 → 可视化增强 → 智能分析 → 平台化
+已优化状态 → 股票池扩展 → 数据质量提升 → 前端优化 → 股票池扩展 → 平台化
     ↓           ↓           ↓           ↓          ↓         ↓
-  混合市场   →  纯A股系统  →  8.5分+   →  全过程可视化 → AI增强 → SaaS服务
+   纯A股系统   →  300+股票  →  8.5分+   →  性能优化  →  500+股票  → SaaS服务
+   2个AI模型
+   完全可视化
 ```
 
 ---
 
 ### 🌟 未来计划
 - [x] **🇨🇳 A股支持** - ✅ 上证50指数数据集成已完成
-- [x] **₿ 加密货币支持** - ✅ 主流加密货币交易支持已完成
+- [x] **🧠 AI思考全过程** - ✅ 完整推理过程可视化已完成
+- [x] **🎨 现代化前端** - ✅ 响应式Web仪表板已完成
 - [ ] **📊 收盘后统计** - 自动收益分析
 - [ ] **🔌 策略市场** - 添加第三方策略分享平台
-- [ ] **🎨 炫酷前端界面** - 现代化Web仪表板
 - [ ] **📈 更多策略** - 技术分析、量化策略
+- [ ] **📈 股票池扩展** - 支持300+A股（上证180、深证100、创业板100、科创50）
 - [ ] **⏰ 高级回放** - 支持分钟级时间精度和实时回放
 - [ ] **🔍 智能过滤** - 更精确的未来信息检测和过滤
 

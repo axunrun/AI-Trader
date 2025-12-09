@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI-Trader - A股AI交易分析平台</title>
+    <title>AI思考全过程 - AI-Trader</title>
     <link rel="icon" type="image/svg+xml" href="figs/stock.svg">
     <link rel="stylesheet" href="assets/css/styles.css?v=4.0">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
@@ -17,9 +17,9 @@
                 <h1>AI-Trader</h1>
             </div>
             <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link active">资产演变</a></li>
+                <li><a href="index.html" class="nav-link">资产演变</a></li>
                 <li><a href="portfolio.html" class="nav-link">投资组合</a></li>
-                <li><a href="ai-reasoning.html" class="nav-link">AI思考全过程</a></li>
+                <li><a href="ai-reasoning.html" class="nav-link active">AI思考全过程</a></li>
             </ul>
             <div class="market-selector">
                 <div class="market-info">
@@ -44,83 +44,29 @@
 
     <main class="container">
         <header class="page-header">
-            <h2>AI代理性能对比</h2>
-            <p class="subtitle" id="marketSubtitle">追踪不同AI模型在上证50 A股交易中的表现</p>
+            <h2>AI思考全过程</h2>
+            <p class="subtitle">追踪AI代理的市场分析、决策推理和操作记录</p>
         </header>
 
-        <section class="stats-grid">
-            <div class="stat-card">
-                <div class="stat-label">活跃代理</div>
-                <div class="stat-value" id="agent-count">-</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-label">交易周期</div>
-                <div class="stat-value" id="trading-period">-</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-label">最佳代理</div>
-                <div class="stat-value" id="best-performer">-</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-label">最佳收益</div>
-                <div class="stat-value" id="avg-return">-</div>
-            </div>
+        <section class="agent-selector-section">
+            <label for="agentSelect">选择AI代理:</label>
+            <select id="agentSelect" class="agent-select">
+                <option value="">请选择代理...</option>
+            </select>
+            <label for="dateSelect">选择日期:</label>
+            <select id="dateSelect" class="date-select" disabled>
+                <option value="">请先选择代理...</option>
+            </select>
+            <button id="loadReasoningBtn" class="btn-primary" disabled>加载分析记录</button>
         </section>
 
-        <section class="chart-section">
-            <div class="chart-card hero">
-                <div class="chart-header">
-                    <h3>总资产价值随时间变化</h3>
-                    <div class="chart-controls">
-                        <button class="btn-secondary" id="toggle-log">线性刻度</button>
-                        <button class="btn-secondary" id="export-chart">导出数据</button>
-                    </div>
-                </div>
-                <div class="chart-container">
-                    <canvas id="assetChart"></canvas>
-                </div>
-            </div>
-        </section>
-
-        <!-- Leaderboard and Action Flow Section -->
-        <section class="insights-section">
-            <!-- Leaderboard (Left Half) -->
-            <div class="leaderboard-section">
-                <div class="section-header">
-                    <h3>
-                        <span class="section-icon">🏆</span>
-                        性能排行榜
-                        <span class="live-indicator"></span>
-                    </h3>
-                </div>
-                <div class="leaderboard-list" id="leaderboardList">
-                    <!-- Populated by JavaScript -->
-                </div>
-            </div>
-
-            <!-- Action Flow (Right Half) -->
-            <div class="action-flow-section">
-                <div class="section-header">
-                    <h3>
-                        <span class="section-icon">💹</span>
-                        最近交易行动
-                        <span class="live-indicator"></span>
-                    </h3>
-                </div>
-                <div class="action-list" id="actionList">
-                    <!-- Populated by JavaScript -->
-                </div>
-            </div>
-        </section>
-
-        <section class="legend-section">
-            <h3>代理图例</h3>
-            <div class="agent-legend" id="agentLegend"></div>
+        <section class="reasoning-container" id="reasoningContainer" style="display: none;">
+            <!-- 推理过程将在这里显示 -->
         </section>
 
         <div class="loading-overlay" id="loadingOverlay">
             <div class="spinner"></div>
-            <p>正在加载交易数据...</p>
+            <p>正在加载AI分析记录...</p>
         </div>
 
         <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
@@ -136,7 +82,6 @@
     <script src="assets/js/config-loader.js?v=14.0"></script>
     <script src="assets/js/cache-manager.js?v=3.0"></script>
     <script src="assets/js/data-loader.js?v=14.0"></script>
-    <script src="assets/js/transaction-loader.js?v=12.0"></script>
-    <script src="assets/js/asset-chart.js?v=12.0"></script>
+    <script src="assets/js/ai-reasoning.js?v=1.0"></script>
 </body>
 </html>

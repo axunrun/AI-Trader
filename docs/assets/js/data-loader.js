@@ -7,7 +7,7 @@ class DataLoader {
         this.priceCache = {};
         this.config = null;
         this.baseDataPath = './data';
-        this.currentMarket = 'us'; // 'us' or 'cn'
+        this.currentMarket = 'cn'; // 'cn' - A股市场
         this.cacheManager = new CacheManager(); // Initialize cache manager
     }
 
